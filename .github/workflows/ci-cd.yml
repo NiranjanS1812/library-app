@@ -35,7 +35,7 @@ jobs:
             ${{ secrets.niranjan1812}}/library-app:latest
       - name: Update Kubernetes Deployment Image Tag
         run: |
-          sed -i "s|image: .*/library-app:.*|image: ${{ secrets.DOCKER_USERNAME }}/library-app:${{ github.sha }}|g" k8s/deployment.yaml
+          sed -i "s|image: .*/library-app:.*|image: ${{ secrets.DOCKER_niranjan1812 }}/library-app:${{ github.sha }}|g" k8s/deployment.yaml
       - name: Set up Kubernetes Context
         uses: azure/k8s-set-context@v4
         with:
